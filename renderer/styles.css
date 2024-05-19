@@ -8,15 +8,6 @@ body {
     font-family: 'Montserrat';
 }
 
-.container {
-    width: 700px;
-    height: 450px;
-    background-color: #ff6c00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .lux-meter {
     width: 500px;
     height: 200px;

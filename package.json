@@ -1,0 +1,17 @@
+{
+  "name": "lux-meter",
+  "product-name": "Lux Meter",
+  "version": "1.0.0",
+  "description": "App to display ESP32 Lux Meter Data",
+  "main": "main.js",
+  "github": "https://github.com/manjit-baishya-development/Lux-Meter-App-Development",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Manjit Baishya",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^30.0.6",
+    "toastify-js": "^1.12.0"
+  }
+}

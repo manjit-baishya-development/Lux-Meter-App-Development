@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUX Meter</title>
+    <title>Lux Meter</title>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Montserrat Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="lux-meter">
+    <div class="container">
+        <div class="lux-meter">
             <div class="header">LUX Meter</div>
             <div class="content">
-                <p>Analog Value: <span id="analogValue">...</span> </p>
-                <p>Lux Value: <span id="lux">...</span> </p>
+                <p>Analog Value: <span id="analog-value">...</span></p>
+                <p>LUX Value: <span id="lux-value">...</span> lux</p>
             </div>
         </div>
     </div>
+    <script src="renderer.js"></script>
 </body>
 </html>

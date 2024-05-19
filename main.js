@@ -1,38 +1,43 @@
-// to get the feature of path
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-// to render the window
-const{ app, BrowserWindow} = require('electron');
-
-// check if app is rumnning on MAC
+// Check if the app is running on Mac
 const isMac = process.platform === 'darwin';
 
-// describing the window
-function createMainWindow(){
+// Describe the window
+function createMainWindow() {
     const mainWindow = new BrowserWindow({
-        title: 'Image Resizer',
-        width: 500, 
-        height:800
+        title: 'LUX Meter',
+        width: 800,
+        height: 600,
+        webPreferences: {
+            preload: path.join(__dirname, 'renderer/preload.js'), // Preload script to expose Node.js and Electron APIs
+            contextIsolation: true, // Protect against prototype pollution
+            enableRemoteModule: false, // Turn off remote module
+        }
     });
 
-    // linking the main.js file
-    mainWindow.loadFile(path.join(__dirname, './renderer/index.html'));
+    // Load the HTML file
+    mainWindow.loadFile(path.join(__dirname, 'renderer/index.html'));
+
+    // Ensure the menu bar is hidden
+    mainWindow.setMenuBarVisibility(false);4
 }
 
-// launch the app when it is ready
+// Launch the app when it is ready
 app.whenReady().then(() => {
     createMainWindow();
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
-          createMainWindow();
+            createMainWindow();
         }
-    })
-})
+    });
+});
 
-// close the app even when it is on mac
+// Close the app even when it is on Mac
 app.on('window-all-closed', () => {
     if (!isMac) {
-      app.quit()
+        app.quit();
     }
 });

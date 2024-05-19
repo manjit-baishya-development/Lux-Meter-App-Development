@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    font-family: 'Montserrat';
+}
+
+.container {
+    width: 700px;
+    height: 450px;
+    background-color: #ff6c00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lux-meter {
+    width: 500px;
+    height: 200px;
+    background-color: #D9D9D9;
+    border: 5px solid black;
+    position: relative;
+    
+}
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.5em;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    font-weight: 800;
+}
+
+.content {
+    padding: 40px;
+    text-align: center;
+    font-size: 1.2em;
+    color: black;
+    font-weight: 600;
+}
